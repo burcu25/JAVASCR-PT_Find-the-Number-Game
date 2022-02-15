@@ -11,10 +11,12 @@ let congrats = document.getElementById("congrats");
 let gameOver = document.getElementById("gameover");
 
 let counter = 10;
+// input.value = "";
 
 function findNumber() {
     
-    if(realNumber == input.value){
+    if(input.value=="") {hintText.innerText = "Please enter a number!"; input.value= "";}
+    else if(realNumber == input.value){
         
         input.style.display = "none";
         button.style.display = "none";
@@ -23,42 +25,37 @@ function findNumber() {
         winNumber.style.display = "block";
         congrats.style.display = "block";
         hintText.style.display = "none";
-        return;
-    }else if ( input.value>realNumber){
+        return;}
+    else if ( input.value>realNumber){
         if(input.value>100){ hintText.innerText = "Your number must be less than 100!";
-        input.value = "";
         }
         else{hintText.innerText = `Please enter a number less than ${input.value}`;
-        input.value = "";
-        }
-    }else if( input.value<realNumber){
+        }}
+    else if( input.value<realNumber){
         if(input.value<0){ hintText.innerText = "Your number must be greater than 0!";
-        input.value = "";
         }
         else{hintText.innerText = `Please enter a number greater than ${input.value}`;
-        input.value = "";
-        }
-        
-    }
-    input.value = "";
+        }}
     
 }
 
 
 button.addEventListener("click", ()=>{
-    
-    counter --;
-    attemption.innerText = `Number of attempts :  ${counter}`;
-    if(counter==0){
-        input.style.display = "none";
-        button.style.display = "none";
-        magicHat.style.display = "none";
-        winNumber.style.display = "block";
-        winNumber.innerText = "You lose!!";
-        gameOver.style.display = "block";
-        hintText.style.display = "none";
-    };
     findNumber();
-    
+    if(input.value=="") {counter == 10;}
+    else{
+        counter --;
+        attemption.innerText = `Number of attempts :  ${counter}`;
+        if(counter==0){
+            input.style.display = "none";
+            button.style.display = "none";
+            magicHat.style.display = "none";
+            winNumber.style.display = "block";
+            winNumber.innerText = "You lose!!";
+            gameOver.style.display = "block";
+            hintText.style.display = "none";
+        }
+    return;
+    };
 })
 
