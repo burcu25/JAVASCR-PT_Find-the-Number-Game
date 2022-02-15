@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    word-spacing: 0.5rem;
+
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, right bottom, from(#2cf5c9), to(#a31dcc));  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.main{
+    margin-top: 3rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.inputbox{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+}
+#inputbox{
+    width: 5rem;
+    height: 3rem;
+    font-size: xx-large;
+    border-radius: 1rem;    
+}
+#check{
+    width: 5rem;
+    height: 3rem;
+    border-radius: 1rem;
+    background-color:rgb(235, 66, 235);
+    font-size:large;
+    font-weight: bold;
+}
+#check:hover{
+    cursor: pointer;
+}
+
+#restart{
+    width: 6rem;
+    height: 3rem;
+    border-radius: 1rem;
+    background-color:rgb(235, 66, 235);
+    font-size:large;
+    font-weight:bold;
+}
+#restart:hover{
+    cursor: pointer;
+}
+
+
+#congrats{
+    display: none;
+    width: 50vw;
+    margin: auto;
+}
+#gameover{
+    display: none;
+    width: auto;
+    margin: auto;
+
+}
+
+#the-number{
+    display: none;
+    font-size: 6rem;
+    color: rgb(255, 0, 0);
+
+}
+#restart{
+
+    text-transform: uppercase;
+}
+
+
+/* div{
+    border: 1px solid black;
+} */

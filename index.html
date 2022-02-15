@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+    <div class="header">
+        <h1 class="header">Guess The Number (1 - 100)</h1>
+    </div>
+    <div class="inputbox">
+        <input type="number" name="inputbox" id="inputbox">
+        <button id="check" type="submit">CHECK</button>
+        <button id="restart" type="submit" onclick="document.location.reload(true);">restart</button>
+    </div>
+    <div class="win-number">
+        <p id="the-number"></p>
+    </div>
+    <div>
+        <img id="hat" src="./images/magic_hat.png" alt="magic_hat" style="width: 20rem;">
+        <img id="congrats" src="./images/congrast.gif" alt="cong">
+        <img id="gameover" src="./images/game-over.gif" alt="gameover">
+    </div>
+    <div class="hint">
+        <h2 id="hint">Write the number you think.</h2>
+    </div>
+    <div class="attempt">
+        <p id="count">Number of attempts :  10</p>
+    </div>
+    
+</div>
+    <script src="./app.js"></script>
+</body>
+</html>
